@@ -5,8 +5,8 @@ module OmniAuth
     class Doorkeeper < OmniAuth::Strategies::OAuth2
       option :name, 'doorkeeper'
       option :client_options, {
-          site: 'http://localhost:3001',
-          authorize_url: 'http://localhost:3001/oauth/authorize'
+          site: 'http://livedemo.01fanli.com',
+          authorize_url: 'http://livedemo.01fanli.com/oauth/authorize'
       }
 
       uid {
