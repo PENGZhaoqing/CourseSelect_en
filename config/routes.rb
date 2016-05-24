@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
 
-  if Rails.env.production?
-    root to: redirect('http://ppp.byid.cn/auth/doorkeeper')
-  else
-    root to: redirect('/auth/doorkeeper')
-  end
+    root to: redirect('http://livedemo.01fanli.com/auth/doorkeeper')
+  #   root to: redirect('/auth/doorkeeper')
 
   (1..10).each do |controller_index|
     (1..10).each do |view_index|
