@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-    root to: redirect('/auth/doorkeeper')
+  root to: redirect('http://livedemo.01fanli.com/sampleapp/auth/doorkeeper')
 
   (1..10).each do |controller_index|
     (1..10).each do |view_index|
