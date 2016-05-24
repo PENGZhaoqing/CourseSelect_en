@@ -1,0 +1,137 @@
+<% controller=params[:controller]
+   action=params[:action] %>
+
+
+<% if current_user.has_right?([1, ApplicationHelper::CONTROLLER_MAP[controller], ApplicationHelper::VIEW_MAP[controller][action], 1]) %>
+    <div class="col-sm-6">
+      <div class="panel panel-info">
+        <div class="panel panel-heading">block 1</div>
+        <div class="panel-body">
+          <%= truncate(Faker::Hipster.paragraph(4), length: 200) %>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+
+<% if current_user.has_right?([1, ApplicationHelper::CONTROLLER_MAP[controller], ApplicationHelper::VIEW_MAP[controller][action], 2]) %>
+    <div class="col-sm-6">
+      <div class="panel panel-primary">
+        <div class="panel panel-heading">
+          block 2
+        </div>
+        <div class="panel-body">
+          <%= truncate(Faker::Hipster.paragraph(4), length: 200) %>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+
+<% if current_user.has_right?([1, ApplicationHelper::CONTROLLER_MAP[controller], ApplicationHelper::VIEW_MAP[controller][action], 3]) %>
+    <div class="col-sm-6">
+      <div class="panel panel-success">
+        <div class="panel panel-heading">
+          block 3
+        </div>
+        <div class="panel-body">
+          <%= truncate(Faker::Hipster.paragraph(4), length: 200) %>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+
+
+<% if current_user.has_right?([1, ApplicationHelper::CONTROLLER_MAP[controller], ApplicationHelper::VIEW_MAP[controller][action], 4]) %>
+    <div class="col-sm-6">
+      <div class="panel panel-danger">
+        <div class="panel panel-heading">
+          block 4
+        </div>
+        <div class="panel-body">
+          <%= truncate(Faker::Hipster.paragraph(4), length: 200) %>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+
+<% if current_user.has_right?([1, ApplicationHelper::CONTROLLER_MAP[controller], ApplicationHelper::VIEW_MAP[controller][action], 5]) %>
+    <div class="col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel panel-heading">
+          block 5
+        </div>
+        <div class="panel-body">
+          <%= truncate(Faker::Hipster.paragraph(4), length: 200) %>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+<% if current_user.has_right?([1, ApplicationHelper::CONTROLLER_MAP[controller], ApplicationHelper::VIEW_MAP[controller][action], 6]) %>
+    <div class="col-sm-6">
+      <div class="panel panel-info">
+        <div class="panel panel-heading">
+          block 6
+        </div>
+        <div class="panel-body">
+          <%= truncate(Faker::Hipster.paragraph(4), length: 200) %>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+<% if current_user.has_right?([1, ApplicationHelper::CONTROLLER_MAP[controller], ApplicationHelper::VIEW_MAP[controller][action], 7]) %>
+    <div class="col-sm-6">
+      <div class="panel panel-primary">
+        <div class="panel panel-heading">
+          block 7
+        </div>
+        <div class="panel-body">
+          <%= truncate(Faker::Hipster.paragraph(4), length: 200) %>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+<% if current_user.has_right?([1, ApplicationHelper::CONTROLLER_MAP[controller], ApplicationHelper::VIEW_MAP[controller][action], 8]) %>
+    <div class="col-sm-6">
+      <div class="panel panel-success">
+        <div class="panel panel-heading">
+          block 8
+        </div>
+        <div class="panel-body">
+          <%= truncate(Faker::Hipster.paragraph(4), length: 200) %>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+<% if current_user.has_right?([1, ApplicationHelper::CONTROLLER_MAP[controller], ApplicationHelper::VIEW_MAP[controller][action], 9]) %>
+    <div class="col-sm-6">
+      <div class="panel panel-danger">
+        <div class="panel panel-heading">
+          block 9
+        </div>
+        <div class="panel-body">
+          <%= truncate(Faker::Hipster.paragraph(4), length: 200) %>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+
+<% if current_user.has_right?([1, ApplicationHelper::CONTROLLER_MAP[controller], ApplicationHelper::VIEW_MAP[controller][action], 10]) %>
+    <div class="col-sm-6">
+      <div class="panel panel-primary">
+        <div class="panel panel-heading">
+          block 10
+        </div>
+        <div class="panel-body">
+          <%= truncate(Faker::Hipster.paragraph(4), length: 200) %>
+        </div>
+      </div>
+    </div>
+<% end %>

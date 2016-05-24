@@ -1,0 +1,37 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <a href="http://localhost:3001"><img src=<%= image_path("logo.png") %>></a>
+    </div>
+
+    <%=render "layouts/navbar"%>
+
+    <ul class="nav navbar-nav navbar-right">
+
+      <% if user_logged_in? %>
+
+          <div class="navbar-text">
+            <%= current_user.name %>
+          </div>
+
+          <div class="navbar-text">
+            <%= current_user.department %>
+          </div>
+
+          <li><a href="http://localhost:3001/home/index"><%= current_user.role %>
+            <span class="	glyphicon glyphicon-user"></span></a>
+          </li>
+
+          <li>
+            <%= link_to user_logout_path, method: :delete do %>
+                <span class="	glyphicon glyphicon-off"></span>
+            <% end %>
+          </li>
+
+      <% end %>
+
+
+    </ul>
+  </div>
+</nav>

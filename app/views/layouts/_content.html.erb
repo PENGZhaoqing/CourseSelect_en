@@ -1,0 +1,28 @@
+<div class="container">
+
+  <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>
+
+</div>
+
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-sm-3 sidenav">
+      <%= render "layouts/sidenav" %>
+    </div>
+
+    <div class="col-sm-9">
+      <%=render "layouts/block"%>
+    </div>
+
+
+    <div class="col-sm-9">
+      <div class="container-fluid">
+        <%= yield %>
+      </div>
+
+    </div>
+  </div>
+</div>
