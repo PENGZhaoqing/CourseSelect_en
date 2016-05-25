@@ -154,7 +154,7 @@ module ApplicationHelper
       end
     end
 
-    return "/#{controller_url}/#{view_url}"
+    return "sampleapp/#{controller_url}/#{view_url}"
 
   end
 
