@@ -4,15 +4,15 @@ Rails.application.routes.draw do
 
   (1..10).each do |controller_index|
     (1..10).each do |view_index|
-      get "page#{controller_index}/view#{view_index}"
+      get "/sampleapp/page#{controller_index}/view#{view_index}"=>"page#{controller_index}/view#{view_index}"
     end
   end
 
   # get 'home/home_page'
 
-  get 'auth/failure' => 'sessions#failure'
-  get '/auth/:provider/callback' => 'sessions#create'
-  delete 'user/logout' => 'sessions#destroy_user'
+  get '/sampleapp/auth/failure' => 'sessions#failure'
+  get '/sampleapp/auth/:provider/callback' => 'sessions#create'
+  delete '/sampleapp/user/logout' => 'sessions#destroy_user'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
