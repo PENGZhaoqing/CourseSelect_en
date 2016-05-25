@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   (1..10).each do |controller_index|
     (1..10).each do |view_index|
-      get "/page#{controller_index}/view#{view_index}"=>"page#{controller_index}/view#{view_index}"
+      get "/page#{controller_index}/view#{view_index}"
     end
   end
 
