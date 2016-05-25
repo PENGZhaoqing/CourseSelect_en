@@ -35,12 +35,12 @@ class SessionsController < ApplicationController
 
   def destroy_user
     user_log_out if user_logged_in?
-    redirect_to "http://localhost:3001/home/index"
+    redirect_to "http://livedemo.01fanli.com/home/index"
   end
 
   def failure
     flash[:notice]='Login failure,please try it again'
-    redirect_to "http://localhost:3001", alert: 'Login failure,please try it again'
+    redirect_to "http://livedemo.01fanli.com", alert: 'Login failure,please try it again'
   end
 
   protected

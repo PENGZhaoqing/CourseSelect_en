@@ -10,9 +10,9 @@ Rails.application.routes.draw do
 
   # get 'home/home_page'
 
-  get 'auth/failure' => 'sessions#failure'
+  get '/auth/failure' => 'sessions#failure'
   get '/auth/:provider/callback' => 'sessions#create'
-  delete 'user/logout' => 'sessions#destroy_user'
+  delete '/user/logout' => 'sessions#destroy_user'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
