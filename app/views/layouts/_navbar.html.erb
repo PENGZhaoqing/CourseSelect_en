@@ -2,7 +2,7 @@
 <ul class="nav navbar-nav">
 
   <% @navbar_nodes.each do |value| %>
-      <%=navside=default_traversal([1]<<value,@parsed_path).sort.first %>
+      <%navside=default_traversal([1]<<value,@parsed_path).sort.first %>
       <li><a href="<%= construct_path(value,navside)%>">Navbar<%= value %></a></li>
   <% end %>
 
