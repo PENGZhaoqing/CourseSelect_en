@@ -6,5 +6,16 @@ This app is aimed to demonstrate the interaction beetween [UcasPortal](https://g
 
 This app is a rails sample web app written by ruby, which could show how the UcasPortal works with ruby apps!
 
-# Dependencies
-* [OAuth]()
+## Dependencies
+* [omniauth-oauth2](https://github.com/intridea/omniauth-oauth2)
+
+## Installation
+
+        $ git clone https://github.com/PENGZhaoqing/VMI_InfoSharing
+        $ cd VMI_InfoSharing
+        $ bundle install
+        $ rake db:migrate
+        $ rake db:seed
+        $ rails server
+
+
