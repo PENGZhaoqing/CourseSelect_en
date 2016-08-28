@@ -6,3 +6,5 @@ This app is aimed to demonstrate the interaction beetween [UcasPortal](https://g
 
 This app is a rails sample web app written by ruby, which could show how the UcasPortal works with ruby apps!
 
+# Dependencies
+* [OAuth]()
