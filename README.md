@@ -11,11 +11,12 @@ This app is a rails sample web app written by ruby, which could show how the Uca
 
 ## Installation
 
-        $ git clone https://github.com/PENGZhaoqing/UcasPortal_SampleApp
-        $ cd UcasPortal_SampleApp
-        $ bundle install
-        $ rake db:migrate
-        $ rake db:seed
-        $ rails server
-
+```
+$ git clone https://github.com/PENGZhaoqing/UcasPortal_SampleApp
+$ cd UcasPortal_SampleApp
+$ bundle install
+$ rake db:migrate
+$ rake db:seed
+$ rails server
+```
 
