@@ -19,4 +19,10 @@ $ rake db:migrate
 $ rake db:seed
 $ rails server
 ```
+## Configuration
 
+updating...
+
+## Usage
+
+updating...
