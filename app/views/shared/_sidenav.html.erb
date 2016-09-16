@@ -1,0 +1,97 @@
+<div class="panel-group" id="accordion">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+
+        <% if teacher_logged_in? %>
+            <a data-toggle="collapse" data-parent="#accordion" href="#CourseCollapse"><span class="glyphicon glyphicon-file"></span>
+              Manage Courses</a>
+        <% end %>
+
+        <% if student_logged_in? %>
+            <a data-toggle="collapse" data-parent="#accordion" href="#CourseCollapse"><span class="glyphicon glyphicon-user"></span>
+              Select Courses</a>
+        <% end %>
+
+      </h4>
+    </div>
+
+    <div id="CourseCollapse" class="panel-collapse collapse <%= "in" if ["courses"].include?(params[:controller]) %>">
+      <ul class="list-group">
+
+        <% if teacher_logged_in? %>
+            <li class="list-group-item">
+              <%= link_to courses_path do %>
+                  <span class="glyphicon glyphicon-chevron-right"></span> Teaching Courses
+                  <span class="label label-info pull-right"><%= current_user.teaching_courses.length %></span>
+              <% end %>
+            </li>
+            <li class="list-group-item">
+              <%= link_to new_course_path do %>
+                  <span class="glyphicon glyphicon-chevron-right"></span> Create New Course
+              <% end %>
+            </li>
+        <% end %>
+
+        <% if student_logged_in? %>
+            <li class="list-group-item">
+              <%= link_to list_courses_path do %>
+                  <span class="glyphicon glyphicon-chevron-right"></span> Course list
+                  <span class="label label-info pull-right"><%= (Course.all-current_user.courses).length %></span>
+              <% end %>
+            </li>
+            <li class="list-group-item">
+              <%= link_to courses_path do %>
+                  <span class="glyphicon glyphicon-chevron-right"></span> Selected
+                  <span class="label label-info pull-right"><%= current_user.courses.length %></span>
+              <% end %>
+            </li>
+        <% end %>
+
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <% if teacher_logged_in? %>
+            <a data-toggle="collapse" data-parent="#accordion" href="#GradeCollapse"><span class="glyphicon glyphicon-user"></span>
+              Manage Score</a>
+        <% end %>
+
+        <% if student_logged_in? %>
+            <a data-toggle="collapse" data-parent="#accordion" href="#GradeCollapse"><span class="glyphicon glyphicon-user"></span>
+              My Transcript</a>
+        <% end %>
+      </h4>
+    </div>
+
+    <div id="GradeCollapse" class="panel-collapse collapse <%= "in" if ["grades"].include?(params[:controller]) %>">
+      <div class="list-group">
+
+        <% if teacher_logged_in? %>
+            <% current_user.teaching_courses.each do |course| %>
+                <li class="list-group-item">
+                  <%= link_to grades_path(course_id: course.id), :method => :get do %>
+                      <span class="glyphicon glyphicon-chevron-right"></span> <%= course.name %>
+                      <span class="label label-info pull-right"><%= course.users.length %></span>
+                  <% end %>
+                </li>
+            <% end %>
+
+        <% end %>
+
+        <% if student_logged_in? %>
+            <li class="list-group-item">
+              <%= link_to grades_path do %>
+                  <span class="glyphicon glyphicon-chevron-right"></span> All scores
+              <% end %>
+            </li>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>

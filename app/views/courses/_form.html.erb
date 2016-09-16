@@ -1,0 +1,98 @@
+<%= form_for @course, html: {class: 'form-horizontal', role: 'form'} do |f| %>
+    <%= render 'shared/error_messages', :object => @course %>
+
+    <div class="form-group">
+      <%= f.label "Course Name", class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+        <div class="input-group">
+          <div class="input-group-addon"><span class="glyphicon glyphicon-arrow-right"></span></div>
+          <%= f.text_field :name, class: 'form-control', placeholder: "Input course name" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Course type", class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+        <div class="input-group">
+          <div class="input-group-addon"><span class="glyphicon glyphicon-arrow-right"></span></div>
+          <%= f.text_field :course_type, class: 'form-control', placeholder: "Input Course Type" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Teaching Typed", class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+        <div class="input-group">
+          <div class="input-group-addon"><span class="glyphicon glyphicon-arrow-right"></span></div>
+          <%= f.text_field :teaching_type, class: 'form-control', placeholder: "Input teaching type" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Exam type", class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+        <div class="input-group">
+          <div class="input-group-addon"><span class="glyphicon glyphicon-arrow-right"></span></div>
+          <%= f.text_field :exam_type, class: 'form-control', placeholder: "Input Exam type" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Limit Number", class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+        <div class="input-group">
+          <div class="input-group-addon"><span class="glyphicon glyphicon-arrow-right"></span></div>
+          <%= f.text_field :limit_num, class: 'form-control', placeholder: "input limit number" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Credit", class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+        <div class="input-group">
+          <div class="input-group-addon"><span class="glyphicon glyphicon-arrow-right"></span></div>
+          <%= f.text_field :credit, class: 'form-control', placeholder: "input course credit" %>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <%= f.label "Classroom", class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+        <div class="input-group">
+          <div class="input-group-addon"><span class="glyphicon glyphicon-arrow-right"></span></div>
+          <%= f.text_field :class_room, class: 'form-control', placeholder: "Input classroom" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Class Time", class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+        <div class="input-group">
+          <div class="input-group-addon"><span class="glyphicon glyphicon-arrow-right"></span></div>
+          <%= f.text_field :course_week, class: 'form-control', placeholder: "input class time" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Class Week", class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+        <div class="input-group">
+          <div class="input-group-addon"><span class="glyphicon glyphicon-arrow-right"></span></div>
+          <%= f.text_field :course_time, class: 'form-control', placeholder: "input class week" %>
+        </div>
+      </div>
+    </div>
+
+    <%= f.submit  class: "btn btn-success btn-block" %>
+    <%= link_to 'Cancel', courses_path, :class => "btn btn-default btn-block" %>
+
+<% end %>

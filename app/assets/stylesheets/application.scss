@@ -16,45 +16,36 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 
-.alert-alert {
-  @extend .alert-warning;
+.table{
+  margin-bottom: 10px;
 }
 
-.alert-notice {
-  @extend .alert-info;
-}
-
-
-body {
-  padding-top: 60px;
-  padding-bottom: 70px;
-}
-
-//http://stackoverflow.com/questions/22887548/css-stretching-background-image-to-100-width-and-height-of-screen/
-html {
-  height: 100%
-}
-
-.dropdown-menu {
-  min-width: 0px !important;
+.table-striped > tbody > tr:hover >td.has_hover {
+  background-color: #C0C0C0;
 }
 
 footer {
-  background-color: white;
-  color: black;
+  background-color: #555;
+  color: white;
   padding: 10px;
 }
 
-.navbar-header > a > img {
-  padding-top:10px
+.body-background{
+  background-image: image-url('background.jpg');
+  //background-color: #DADADA;
+  //background-repeat: no-repeat;
+  //background-size: 100% 100%;
 }
 
-.nav >li>a {
-  padding-top:20px
+body{
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 
-.navbar-text{
-  padding-top:5px
+html {
+  height: 100%;
 }
+
+
 
 

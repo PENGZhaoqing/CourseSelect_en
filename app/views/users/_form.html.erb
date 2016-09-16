@@ -1,0 +1,68 @@
+<%= form_for @user, html: {class: 'form-horizontal', role: 'form'} do |f| %>
+    <%= render 'shared/error_messages', :object => @user %>
+
+    <div class="form-group">
+      <%= f.label "Name", class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+        <div class="input-group">
+          <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+          <%= f.text_field :name, class: 'form-control', placeholder: "Input name" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Email", class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+        <div class="input-group">
+          <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+          <%= f.email_field :email, class: 'form-control', placeholder: "Input email" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Major", class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+        <div class="input-group">
+          <div class="input-group-addon"><span class="glyphicon glyphicon-home"></span></div>
+          <%= f.text_field :major, class: 'form-control', placeholder: "Input Major" %>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <%= f.label "Department", class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+        <div class="input-group">
+          <div class="input-group-addon"><span class="glyphicon glyphicon-home"></span></div>
+          <%= f.text_field :department, class: 'form-control', placeholder: "Department" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Password", class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+        <div class="input-group">
+          <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+          <%= f.password_field :password, class: 'form-control', placeholder: "Input password" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Confirm Password", class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+        <div class="input-group">
+          <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+          <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Input password again" %>
+        </div>
+      </div>
+    </div>
+
+    <%= f.submit  class: "btn btn-info btn-block" %>
+    <%= link_to 'Cancel', root_path, :class => "btn btn-default btn-block" %>
+
+<% end %>

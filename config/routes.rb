@@ -1,25 +1,9 @@
 Rails.application.routes.draw do
-
-  root to: redirect('http://livedemo.01fanli.com/sampleapp/auth/doorkeeper')
-
-  (1..10).each do |controller_index|
-    (1..10).each do |view_index|
-      get "/page#{controller_index}/view#{view_index}"
-    end
-  end
-
-  # get 'home/home_page'
-
-  get '/auth/failure' => 'sessions#failure'
-  get '/auth/:provider/callback' => 'sessions#create'
-  delete '/user/logout' => 'sessions#destroy_user'
-
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -29,6 +13,30 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  root 'homes#index'
+
+  resources :courses do
+    member do
+      get :select
+      get :quit
+    end
+    collection do
+      get :list
+    end
+  end
+
+  resources :grades, only: [:index, :update]
+  resources :users
+
+  get '/auth/failure' => 'sessions#failure'
+  get '/auth/:provider/callback' => 'sessions#callback'
+
+  get 'sessions/login' => 'sessions#new'
+  post 'sessions/login' => 'sessions#create'
+  delete 'sessions/logout' => 'sessions#destroy'
+
 
   # Example resource route with options:
   #   resources :products do

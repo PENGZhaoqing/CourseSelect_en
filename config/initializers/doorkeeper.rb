@@ -5,8 +5,8 @@ module OmniAuth
     class Doorkeeper < OmniAuth::Strategies::OAuth2
       option :name, 'doorkeeper'
       option :client_options, {
-          site: 'http://livedemo.01fanli.com',
-          authorize_url: 'http://livedemo.01fanli.com/oauth/authorize'
+          site: ApplicationHelper::PROVIDER_DOMAIN,
+          authorize_url: ApplicationHelper::OAUTHORIZE_URL
       }
 
       uid {
@@ -16,11 +16,13 @@ module OmniAuth
       info do
         {
             name: raw_info['user']['name'],
-            number: raw_info['user']['number'],
+            num: raw_info['user']['number'],
             role: raw_info['user']['role'],
-            department: raw_info['user']['role'],
+            email: raw_info['user']['email'],
+            major: raw_info['user']['major'],
+            department: raw_info['user']['department'],
             node: raw_info['access']['node'],
-            path: raw_info['access']['path']
+            path: raw_info['access']['path'],
         }
       end
 
