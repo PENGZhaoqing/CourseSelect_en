@@ -11,18 +11,55 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160327073518) do
+ActiveRecord::Schema.define(version: 20160909105514) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "courses", force: :cascade do |t|
+    t.string   "name"
+    t.string   "course_code"
+    t.string   "course_type"
+    t.string   "teaching_type"
+    t.string   "exam_type"
+    t.string   "credit"
+    t.integer  "limit_num"
+    t.integer  "student_num",   default: 0
+    t.string   "class_room"
+    t.string   "course_time"
+    t.string   "course_week"
+    t.integer  "teacher_id"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "grades", force: :cascade do |t|
+    t.integer  "course_id"
+    t.integer  "user_id"
+    t.integer  "grade"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "grades", ["course_id"], name: "index_grades_on_course_id", using: :btree
+  add_index "grades", ["user_id"], name: "index_grades_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.string   "role"
+    t.string   "num"
+    t.string   "major"
+    t.string   "department"
+    t.string   "password_digest"
+    t.string   "remember_digest"
     t.text     "node"
     t.text     "path"
-    t.string   "department"
-    t.string   "remember_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.boolean  "admin",           default: false
+    t.boolean  "teacher",         default: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
 end

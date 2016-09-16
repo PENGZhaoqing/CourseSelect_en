@@ -1,4 +1,4 @@
-module TreeHelper
+module ParserHelper
 
   def digit(number)
     number.to_s.split('').count
