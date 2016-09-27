@@ -1,4 +1,5 @@
-# CourseSelect
+# CourseSelect of UCAS Portal
+
 
 This app is aimed to demonstrate the interaction beetween [UcasPortal](https://github.com/PENGZhaoqing/UcasPortal) and other web application with OAuth 2.0 protocol. 
 
