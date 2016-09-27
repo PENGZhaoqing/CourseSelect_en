@@ -14,6 +14,8 @@ This tutorial is based on the postgraduate course, named software development me
 * Search and retrieval within the site (such as searching courses 
 * according to the classification)
 
+### Changes with [oringal version](https://github.com/PENGZhaoqing/CourseSelect) 
+
 This app is aimed to demonstrate the interaction beetween [UcasPortal](https://github.com/PENGZhaoqing/UcasPortal) and other web application with OAuth 2.0 protocol. 
 
 [UcasPortal](https://github.com/PENGZhaoqing/UcasPortal) is a campus portals information system developed to provide as unified access entrance for the faculties, students and campus application developers. Because of the popularity of utilizing  OAuth 2.0, UcasPortal can communicate with pervasive web applications, which were supported by various languages such as python, php, ruby and so on.
