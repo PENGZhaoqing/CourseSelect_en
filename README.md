@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This sample system is the english version of CourseSelect [Original Version](https://github.com/PENGZhaoqing/CourseSelect), which is developed for the UCAS master course (Senior Software Engineering). Aiming to help beginners to learn RoR (Ruby on Rails).
+This sample system is an extended english version of CourseSelect [Original Version](https://github.com/PENGZhaoqing/CourseSelect), which is developed for the UCAS master course (Senior Software Engineering). Aiming to help beginners to learn RoR (Ruby on Rails).
 Based on this, beginners can add more function:
 
 * Deal with course conflict and control the student number
@@ -15,7 +15,11 @@ Based on this, beginners can add more function:
 * Search and retrieval within the site (such as searching courses 
 * according to the classification)
 
-## Another motivation 
+## Changes with [Original CourseSelect](https://github.com/PENGZhaoqing/CourseSelect)
+
+This app extends the original CourseSelect with OAuth Interaction.
+
+### Motivation 
 
 This app is also aimed to demonstrate the interaction beetween [UcasPortal](https://github.com/PENGZhaoqing/UcasPortal) and other web application with OAuth 2.0 protocol. 
 
