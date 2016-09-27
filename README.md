@@ -56,16 +56,19 @@ type `localhost:3000` in your broswer to visit the home page
 1.Student Login
 
 account:`student1@test.com`
+
 password:`password`
 
 2.Teacher Login
 
 account:`teacher1@test.com`
+
 password:`password`
 
 3.Admin Login
 
 account:`admin@test.com`
+
 password:`password`
 
 the number in account can be replaced by 2,3... and so on
