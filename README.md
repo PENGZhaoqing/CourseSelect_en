@@ -41,7 +41,7 @@ Please install [postgresql](https://devcenter.heroku.com/articles/heroku-postgre
 run the following code in terminal of Mac OS or Linux 
 
 ```
-$ git clone https://github.com/PENGZhaoqing/UcasPortal_SampleApp
+$ git clone https://github.com/PENGZhaoqing/CourseSelect_en
 $ cd UcasPortal_SampleApp
 $ bundle install
 $ rake db:migrate
