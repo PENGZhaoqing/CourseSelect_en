@@ -1,5 +1,5 @@
 # require 'doorkeeper'
 
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :doorkeeper,"b2e7b364245f32c045584f7cdc997411e7019e34ecc2d146e8ad29c054be48b8", "c57343cecc3a41e2fd17226db5d066a2b5a37a33572699b0b4881854f855c0b3"
+  provider :doorkeeper,"3b6c4adda378463f79624afb72cf285d23de09a170247424e51ace0951166a6f", "d22c97a9df2ea3ae798cb3201f3a74806093b4c87a11cc940cc4b88e8898f78b"
 end
