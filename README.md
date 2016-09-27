@@ -1,6 +1,6 @@
 # CourseSelect(en) 
 
-## Introduction
+### [Tutorial1](http://blog.csdn.net/ppp8300885/article/details/52629909) 
 
 This sample system is an extended english version of CourseSelect [Original Version](https://github.com/PENGZhaoqing/CourseSelect), which is developed for the UCAS master course (Senior Software Engineering). Aiming to help beginners to learn RoR (Ruby on Rails).
 Based on this, beginners can add more function:
